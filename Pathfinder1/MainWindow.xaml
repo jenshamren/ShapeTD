@@ -1,0 +1,182 @@
+﻿<Window x:Class="ShapeTD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShapeTD"
+        mc:Ignorable="d"
+        Title="ShapeTD" Height="734" Width="1286" Background="#FF3A3232" ResizeMode="NoResize">
+    <Grid>
+        <Canvas x:Name="playArea" Background="#FFA09E69">
+            <TextBlock x:Name="levelTextBlock" Text="Level: " FontFamily="Buxton Sketch" FontSize="34" Canvas.Left="1165" Canvas.Top="40" Tag="levelText"></TextBlock>
+            <Canvas x:Name="tankModel" Height="95" Canvas.Left="1060" Canvas.Top="598" Width="100" Tag="tankModel">
+                <Canvas x:Name="bottomTankTread" Height="16" Width="80" Tag="bottomStationaryTankTreadModel" Canvas.Left="5" Canvas.Top="80">
+                    <Rectangle x:Name="bottomTankTreadBody" Fill="#FF5B5B5B" Height="16" Width="80">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,80,16"  RadiusX="4.5" RadiusY="4.5"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="bottomTankTreadOutline" Fill="#FF5B5B5B" Height="16" Width="18" Stroke="Black" Canvas.Left="4">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,18,16"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="bottomTankTreadOutline1" Fill="#FF5B5B5B" Height="16" Width="18" Stroke="Black" Canvas.Left="40" RenderTransformOrigin="0.944,-1.333">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,18,16"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="bottomTankTreadOutline2" Fill="#FF5B5B5B" Height="16" Width="18" Stroke="Black" Canvas.Left="58" RenderTransformOrigin="1.056,-0.667">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,18,16"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="bottomTankTreadOutline3" Fill="#FF5B5B5B" Height="16" Width="18" Stroke="Black" Canvas.Left="22">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,18,16"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                </Canvas>
+                <Rectangle x:Name="tankBody" Fill="#FF244624" Height="65" Stroke="Black" Width="100" Tag="tankBody" Canvas.Top="15">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,100,65"  RadiusX="4" RadiusY="4"/>
+                    </Rectangle.Clip>
+                </Rectangle>
+                <Rectangle x:Name="weaponMount" Fill="#FF5B5B5B" Height="35" Stroke="Black" Width="35" Tag="weaponMount" Canvas.Top="30" Canvas.Left="20">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,35,35"  RadiusX="3" RadiusY="3"/>
+                    </Rectangle.Clip>
+                </Rectangle>
+                <Canvas x:Name="tankProjectileLauncher" Height="43" Width="15" Tag="tankProjectileLauncher" Canvas.Top="12" Canvas.Left="30">
+                    <Rectangle x:Name="machineGunBarrel" Fill="#FF89A089" Height="28" Stroke="Black" Tag="machineGunBarrel" Width="7" StrokeThickness= "0.7" RenderTransformOrigin="0.5,1.25" Canvas.Left="4"/>
+                    <Rectangle x:Name="machineGunBarrelMount" Fill="#FF89A089" Height="15" Width="15" Tag="machineGunBarrelMount" StrokeThickness="0.7" RenderTransformOrigin="0.5,0.5" Canvas.Top="28" Stroke="Black">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,15,15"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="projectileSpawnPoint" Height="0" Canvas.Left="5" Width="0" Tag="projectileSpawnPoint"/>
+
+                </Canvas>
+                <Canvas x:Name="topTankTread" Height="16" Width="80" Tag="topStationaryTankTreadModel" Canvas.Left="5" Canvas.Top="-1">
+                    <Rectangle x:Name="topTankTreadBody" Fill="#FF5B5B5B" Height="16" Width="80">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,80,16"  RadiusX="4.5" RadiusY="4.5"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="TopTankTreadOutline1" Fill="#FF5B5B5B" Height="16" Width="18" Stroke="Black" Canvas.Left="4">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,18,16"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="topTankTreadOutline2" Fill="#FF5B5B5B" Height="16" Width="18" Stroke="Black" Canvas.Left="40" RenderTransformOrigin="0.944,-1.333">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,18,16"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="topTankTreadOutline3" Fill="#FF5B5B5B" Height="16" Width="18" Stroke="Black" Canvas.Left="58" RenderTransformOrigin="1.056,-0.667">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,18,16"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                    <Rectangle x:Name="topTankTreadOutline4" Fill="#FF5B5B5B" Height="16" Width="18" Stroke="Black" Canvas.Left="22">
+                        <Rectangle.Clip>
+                            <RectangleGeometry Rect="0,0,18,16"  RadiusX="3" RadiusY="3"/>
+                        </Rectangle.Clip>
+                    </Rectangle>
+                </Canvas>
+            </Canvas>
+            <Rectangle x:Name="wallModel" Fill="#FF616161" Height="23" Stroke="Black" StrokeThickness="1.5" Width="70" Tag="wallBody" RenderTransformOrigin="1.197,2.25" Canvas.Left="910" Canvas.Top="235">
+                <Rectangle.Clip>
+                    <RectangleGeometry Rect="0,0,70,23"  RadiusX="4.5" RadiusY="4.5"/>
+                </Rectangle.Clip>
+            </Rectangle>
+            <Rectangle x:Name="enemyModel" Width="25" Height="25" Canvas.Left="450" Canvas.Top="450" Stroke="Black" StrokeThickness=".7" Fill="#FF1D1B1B" Opacity=".85" Tag="enemyPawnModel">
+                <Rectangle.Clip>
+                    <RectangleGeometry Rect="0,0,25,25" RadiusX="4.5" RadiusY="4.5"/>
+                </Rectangle.Clip>
+            </Rectangle>
+            <Rectangle x:Name="rectangleExplosionParticle" Width="7.5" Height="7.5" Canvas.Left="450" Canvas.Top="400" Fill="#FF1D1B1B" Tag="rectangleExplosionParticle">
+                <Rectangle.Clip>
+                    <RectangleGeometry Rect="0,0,7.5,7.5"  RadiusX="1.5" RadiusY="1.5"/>
+                </Rectangle.Clip>
+            </Rectangle>
+            <Ellipse x:Name="ellipseExplosionParticle" Width="7.5" Height="7.5" Canvas.Left="400" Canvas.Top="400" Fill="#FFFFE900" Tag="ellipseExplosionParticle"/>
+            <Ellipse x:Name="bulletModel" Fill="#FFFFE900" Height="40" Canvas.Left="1205" Stroke="#FF424242" StrokeThickness ="0.5" Canvas.Top="495" Width="5" Tag="bullet"/>
+            <Ellipse x:Name="missileModel" Fill="#FFBD0000" Height="55" Canvas.Left="1168" Stroke="#FF686868" StrokeThickness=".5" Canvas.Top="465" Width="9" Tag="missile"/>
+            <Canvas x:Name="waterTurretModel" Height="23" Canvas.Left="481" Canvas.Top="350" Width="46" Tag="waterTurretModel">
+                <Ellipse x:Name="waterTurretBottom" Fill="#FF616161" Height="40" Stroke="Black" StrokeThickness="1.5" Width="48" Canvas.Top="-10"/>
+                <Canvas x:Name="waterTurretProjectileLauncher" Height="50" Canvas.Left="7" Canvas.Top="-25" Width="31" Tag ="waterTurretProjectileLauncher">
+                    <Rectangle x:Name="waterTurretBarrel" Fill="#FF101866" Height="13" Stroke="Black" StrokeThickness="0" Width="37" RenderTransformOrigin="0.5,0.5" Canvas.Top="10" Canvas.Left="-1">
+                        <Rectangle.RenderTransform>
+                            <RotateTransform Angle="-90"/>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Ellipse x:Name="waterTurretHead" Fill="#FF101866" Height="47" Stroke="Black" StrokeThickness="0" Width="29" Tag="waterTurretHeadModel" Canvas.Top ="5" Canvas.Left="3"/>
+                    <Rectangle x:Name="waterTurretProjectileSpawnPoint" Height="1" Width="1" Tag="projectileSpawnPoint" Canvas.Left="9" Canvas.Top="-12"/>
+                </Canvas>
+            </Canvas>
+            <Canvas x:Name="playerGoldModel" Height="30" Width="120" Tag="playerGoldModel" Canvas.Top="660" Canvas.Left="10">
+                <TextBlock x:Name="playerGoldTextBlock" Text="250" Canvas.Top="0" FontSize="32" FontFamily="Buxton Sketch" Foreground="#FF110000" Tag="playerGoldTextBlock"/>
+                <Ellipse x:Name="goldIcon" Fill="#FFE8FF00" Height="30" Canvas.Left="100" Stroke="#FF958080" StrokeThickness=".5" Width="25" Canvas.Top="0"/>
+            </Canvas>
+            <Ellipse x:Name="waterTurretProjectile" Fill="#FF101866" Height="35" Stroke="Black" StrokeThickness="0" Width="20" Tag="waterTurretProjectile" Canvas.Top ="270" Canvas.Left="490"/>
+            <ProgressBar x:Name="enemyPawnHealthBar" Height="15" Canvas.Left="860" Canvas.Top="400" Width="25" Background="#FFB60202" Foreground ="#FF017401" BorderBrush="#FFB60202" Opacity="1" Tag="enemyHealthBarModel"
+/>
+            <Canvas x:Name="backButton" Tag="regretPurchaseModel" Width="60" Height="40" Canvas.Left="670" Canvas.Top="650" Opacity=".7">
+                <Rectangle x:Name="backButtonBody" Width="30" Height="15" Canvas.Left="23" Canvas.Top="12.5" Fill="#FFC11D1D">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,30,15" RadiusX="3.5" RadiusY="3.5"/>
+                    </Rectangle.Clip>
+                </Rectangle>
+                <Polygon x:Name="backButtonHead" Points="0,0 30,0 15,20" Fill="#FFC11D1D" Canvas.Left="25" Canvas.Top="5">
+                    <Polygon.RenderTransform>
+                        <RotateTransform Angle="90"/>
+                    </Polygon.RenderTransform>
+                </Polygon>
+                <TextBlock x:Name="backButtonTextBlock" Width="30" Height="30" Canvas.Top="-30" Canvas.Left="20" Text="(B)" FontSize="18.667" FontFamily="Buxton Sketch"/>
+            </Canvas>
+            <Canvas x:Name="buyWallModel" Height="51" Canvas.Left="445" Canvas.Top="644" Width="72" Tag="buyWallModel" Opacity="0.7">
+                <TextBlock x:Name="wallCostTextBlock" TextWrapping="Wrap" Text="(D)" FontSize="18.667" Tag="buyWallTextBlock" FontFamily="Buxton Sketch"/>
+                <Rectangle x:Name="wallModelCopy" Fill="#FF616161" Height="24" Stroke="Black" StrokeThickness="1.5" Width="72.5" Tag="wallBody" Canvas.Top="27">
+                    <Rectangle.Clip>
+                        <RectangleGeometry Rect="0,0,72.5,24"  RadiusX="4.5" RadiusY="4.5"/>
+                    </Rectangle.Clip>
+                </Rectangle>
+                <Ellipse x:Name="smallCoinModel" Fill="#FFE8FF00" Height="22" Canvas.Left="55" Stroke="Black" StrokeThickness="1" Width="17" Tag="smallCoinModel"/>
+            </Canvas>
+            <Canvas x:Name="buyWaterTurretModel" Height="75" Canvas.Left="535" Canvas.Top="624" Width="46" Tag="buyWaterTurretModel" Opacity=".75">
+                <TextBlock x:Name="buyWaterTurretTextBlock" TextWrapping="Wrap" Text="(F)" FontSize="18.667" Tag="buyWaterTurretTextBlock" Canvas.Top="-10" Canvas.Left="-15" FontFamily="Buxton Sketch"/>
+                <Canvas x:Name="waterTurretModelCopy" Height="48" Canvas.Top="22" Width="46" Tag="waterTurretModel">
+                    <Canvas x:Name="wtBaseCopy" Height="46" Canvas.Top="3" Width="46">
+                        <Ellipse x:Name="waterTurretBottom1" Fill="#FF616161" Height="40" Stroke="Black" StrokeThickness="1.5" Width="46" Canvas.Top="6"/>
+                    </Canvas>
+                    <Canvas x:Name="wtLauncherCopy" Height="50" Canvas.Left="6" Canvas.Top="-5" Width="31">
+                        <Rectangle x:Name="waterTurretBarrelCopy" Fill="#FF101866" Height="13" Stroke="Black" StrokeThickness="0" Width="37"  Canvas.Top="35" Canvas.Left="11">
+                            <Rectangle.RenderTransform>
+                                <RotateTransform Angle="-90"/>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+                        <Ellipse x:Name="waterTurretHead2" Fill="#FF101866" Height="47" Stroke="Black" StrokeThickness="0" Width="29" Tag="waterTurretHeadModel" Canvas.Top ="5" Canvas.Left="3"/>
+                        <Rectangle x:Name="waterTurretProjectileSpawnPoint1" Height="1" Width="1" Tag="waterTurretProjectileSpawnPoint" Canvas.Left="9" Canvas.Top="-12"/>
+                    </Canvas>
+                </Canvas>
+                <Ellipse x:Name="smallCoinModel_Copy" Fill="#FFE8FF00" Height="22" Canvas.Left="40" Stroke="Black" StrokeThickness="1" Width="17" Canvas.Top="-11" Tag="smallCoinModel"/>
+            </Canvas>
+            <Canvas x:Name="healthLeft" Width="100" Height="30" Canvas.Left="200" Canvas.Top="660" Tag="playerHealthModel">
+                <TextBlock x:Name="healthLeftTextBlock" Text="10" FontFamily="Buxton Sketch" FontSize="32" Tag="playerHealthTextBlock"/>
+                <Ellipse x:Name="healthModel" Width="25" Height="30" Fill="#FFA60909" Stroke="WhiteSmoke" StrokeThickness="3" Canvas.Left="70" Canvas.Top="0"/>
+            </Canvas>
+            <Canvas x:Name="playPauseButton" Tag="playPauseButtonModel" Width="40" Height="40" Canvas.Left="1200" Canvas.Top="640">
+                <Polygon x:Name="playButton" Points="0,0 40,0 20,40" Width ="40" Height="40" Canvas.Top="40" Canvas.Left="0" Fill="#FF0D9E0D" Tag="playButtonModel">
+                    <Polygon.RenderTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Polygon.RenderTransform>
+                </Polygon>
+                <Canvas x:Name="pauseButton" Width="40" Height="40" Canvas.Left="0" Canvas.Top="0" Tag="pauseButtonModel" Visibility="Hidden">
+                    <Rectangle x:Name="leftPauseModel" Width="13" Height="40" Fill="#FF0D9E0D" Canvas.Top="0" Canvas.Left="3"/>
+                    <Rectangle x:Name="rightPauseModel" Width="13" Height="40" Fill="#FF0D9E0D" Canvas.Top="0" Canvas.Left="22"/>
+                </Canvas>
+            </Canvas>
+        </Canvas>
+    </Grid>
+</Window>
